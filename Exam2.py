@@ -6,12 +6,7 @@ class Television:
     def Boton(Encender = "off"):
         if Encender == "off":
             Encender = "on"
-            print("El interruptor esta en ON.")
-        else:
-            if Encender == "on":
-                Encender = "off"
-
-                print("El interruptor esta ahora en OFF.")
+            print("El interruptor esta ahora en ON.")
 
     @staticmethod
     def Volumen(volumen=0):
@@ -45,8 +40,8 @@ def Inicio():
     opcion2 = None
     while opcion2 != "0":
         print("""Television calidAd
-                0) - Salir
-                1) - Apagar o Prender la TV
+                0) - Apagar
+                1) - Prender la TV
                 2) - Subir o Bajar el Volumen
                 3) - Cambiar el Canal
                 """)
@@ -54,7 +49,7 @@ def Inicio():
         opcion = input("Escoger: ")
         print()
         if opcion == "0":
-            print("Hasta Luego.")
+            print("El Interruptor esta ahora en OFF")
             break
         elif opcion == "1":
             tv.Boton()
